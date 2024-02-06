@@ -1,0 +1,13 @@
+public function up()
+    {
+        Schema::create('expenses', function (Blueprint $table) {
+            $table->integer('exp_id')->primary();
+            $table->string('image');
+            $table->string('shop_name');
+            $table->float('amount');
+            $table->string('status');
+            $table->string('created_by');
+            $table->string('updated_by');
+            $table->timestamps();
+        });
+    }
